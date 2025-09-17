@@ -8,6 +8,7 @@ const pool = new Pool({
   database: process.env.DB_NAME,
   password: String(process.env.DB_PASSWORD),
   port: process.env.DB_PORT,
+  family: 4   // 👈 force IPv4 instead of IPv6
 });
 
 module.exports = pool;
